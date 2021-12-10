@@ -1,0 +1,27 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Iniciar sesión</h2>
+      <h2 class="inactive underlineHover">Registrar</h2>
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <i class="large material-icons">account_box</i>
+      </div>
+      
+      <!-- Login Form -->
+      <div class="container">
+        <form [formGroup]="fgValidador" (ngSubmit)="identificarUsuario()">
+            <input formControlName="usuario" type="text" id="login" class="fadeIn second" name="login" placeholder="usuario">
+            <input formControlName="clave" type="password" id="password" class="fadeIn third" name="password" placeholder="contraseña">
+            <input [disabled]="!fgValidador.valid" type="submit" class="fadeIn fourth" value="Ingresar">
+        </form>
+      </div>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" routerLink="#">Olvidó la contraseña?</a>
+      </div>
+  
+    </div>
+  </div>
